@@ -1,0 +1,179 @@
+    /* Reset básico */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #e6f2ff;
+      color: #003366;
+      font-size: 18px;
+    }
+
+    /* Hero Section */
+    .hero {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      padding: 80px 20px;
+      background-color: #d9ecff;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .hero-content {
+      max-width: 550px;
+      margin-right: 40px;
+    }
+
+    .hero h1 {
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 20px;
+      color: #003366;
+    }
+
+    .subtext {
+      font-size: 18px;
+      margin-bottom: 30px;
+      color: #005a99;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 14px 22px;
+      border: none;
+      border-radius: 10px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    .btn.primary {
+      background-color: #005a99;
+      color: white;
+    }
+
+    .btn.primary:hover {
+      background-color: #004477;
+    }
+
+    .btn.outline {
+      background: transparent;
+      border: 2px solid #005a99;
+      color: #005a99;
+    }
+
+    .btn.outline:hover {
+      background-color: #cce6ff;
+    }
+
+    .hero-image img {
+      max-width: 340px;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      margin-top: 20px;
+    }
+
+    /* Seções */
+    section {
+      padding: 50px 20px;
+    }
+
+    /* Cards */
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 14px;
+      max-width: 340px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      text-align: left;
+      font-size: 17px;
+      transition: transform 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card h3 {
+      font-size: 20px;
+      font-weight: bold;
+      color: #005a99;
+      margin-bottom: 18px;
+      text-transform: uppercase;
+    }
+
+    .card ol {
+      padding-left: 22px;
+      color: #333;
+    }
+
+    .card li {
+      margin-bottom: 12px;
+      line-height: 1.6;
+    }
+
+    /* Depoimento */
+    .depoimento {
+      background: #f2faff;
+      text-align: center;
+    }
+
+    .depoimento blockquote {
+      font-style: italic;
+      font-size: 20px;
+      max-width: 700px;
+      margin: 0 auto;
+      color: #004477;
+    }
+
+    .depoimento span {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    /* Contato */
+    .contato {
+      text-align: center;
+    }
+
+    .contato h2 {
+      font-size: 28px;
+      color: #003366;
+      margin-bottom: 20px;
+    }
+
+    .contato p {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+    /* Responsividade */
+    @media (max-width: 768px) {
+      .hero {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .hero-content {
+        margin-right: 0;
+        margin-bottom: 30px;
+      }
+    }
