@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Meu Perfil</title>
+  <link rel="stylesheet" href="perfil_do_usuário.css" />
+
+
+
+  
+  
+  
+  <script>
+
+
+    //script para as abas//
+      function mostrarAba(index) {
+    const tabs = document.querySelectorAll(".tab");
+    const contents = document.querySelectorAll(".tab-content");
+    tabs.forEach((tab, i) => {
+      tab.classList.toggle("active", i === index);
+      contents[i].classList.toggle("active", i === index);
+    });
+  }
+
+  window.onload = () => mostrarAba(0); // mostra primeira aba por padrão
+
+  window.addEventListener("DOMContentLoaded", () => {
+  const toggleBtn = document.querySelector(".toggle-senha");
+  const senhaInput = document.getElementById("senha");
+
+  toggleBtn.addEventListener("click", () => {
+    if (senhaInput.type === "password") {
+      senhaInput.type = "text";
+      toggleBtn.setAttribute("aria-label", "Ocultar senha");
+      toggleBtn.title = "Ocultar senha";
+      // Pode trocar o SVG aqui se quiser (ex: olho fechado)
+    } else {
+      senhaInput.type = "password";
+      toggleBtn.setAttribute("aria-label", "Mostrar senha");
+      toggleBtn.title = "Mostrar senha";
+    }
+  });
+});
+  </script>
+</head>
+<style>
+  .tabs {
+    display: flex;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #004c99;
+  }
+
+  .tab {
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: #f4f9ff;
+    border: 1px solid #99c2ff;
+    border-bottom: none;
+    border-radius: 8px 8px 0 0;
+    margin-right: 5px;
+    font-weight: bold;
+    color: #003366;
+  }
+
+  .tab.active {
+    background-color: white;
+    border-bottom: 2px solid white;
+  }
+
+  .tab-content {
+    display: none;
+  }
+
+  .tab-content.active {
+    display: block;
+  }
+</style>
+
+<script>
+
+
+
+</script>
+<body>
+    <!-- HEADER -->
+
+
+  <main class="container">
+    <h1 class="titulo-pagina">MEU PERFIL</h1>
+    <a href="#" class="subtitulo">DADOS DO USUÁRIO</a>
+
+    <div class="foto-perfil">
+      <img src="FOTO DE PERFIL.jpg" alt="Foto do usuário" />
+    </div>
+
+<div class="tabs">
+  <div class="tab active" onclick="mostrarAba(0)">Dados Pessoais</div>
+  <div class="tab" onclick="mostrarAba(1)">Endereço</div>
+  <div class="tab" onclick="mostrarAba(2)">Acesso</div>
+</div>
+
+<form class="form">
+  <!-- ABA 1: DADOS PESSOAIS -->
+  <div class="tab-content active">
+    <div class="linha">
+      <div class="campo">
+        <label for="nome">NOME COMPLETO*</label>
+        <input type="text" id="nome" name="nome" value="Maria Júlia Morais Costa" />
+      </div>
+      <div class="campo">
+        <label for="telefone">TELEFONE*</label>
+        <input type="text" id="telefone" name="telefone" value="(88) 9-9235-7890" />
+      </div>
+    </div>
+
+    <div class="linha">
+      <div class="campo">
+        <label for="email">EMAIL*</label>
+        <input type="email" id="email" name="email" value="souza@gmail.com" />
+      </div>
+      <div class="campo">
+        <label>DATA DE NASCIMENTO*</label>
+        <div class="data">
+          <input type="text" name="dia" maxlength="2" value="16" />
+          <input type="text" name="mes" maxlength="2" value="07" />
+          <input type="text" name="ano" maxlength="4" value="1992" />
+        </div>
+      </div>
+    </div>
+
+    <div class="linha">
+      <div class="campo">
+        <label for="genero">GÊNERO*</label>
+        <select id="genero" name="genero">
+          <option value="feminino" selected>Feminino</option>
+          <option value="masculino">Masculino</option>
+          <option value="outro">Outro</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <!-- ABA 2: ENDEREÇO -->
+  <div class="tab-content">
+    <div class="linha">
+      <div class="campo">
+        <label for="rua">RUA*</label>
+        <input type="text" id="rua" name="rua" value="Rua Exemplo" />
+      </div>
+      <div class="campo">
+        <label for="numero">NÚMERO*</label>
+        <input type="text" id="numero" name="numero" value="123" />
+      </div>
+    </div>
+
+    <div class="linha">
+      <div class="campo">
+        <label for="bairro">BAIRRO*</label>
+        <input type="text" id="bairro" name="bairro" value="Centro" />
+        
+      </div>
+      <div class="campo">
+        <label for="cidade">CIDADE*</label>
+        <input type="text" id="cidade" name="cidade" value="Cidade" />
+      </div>
+    </div>
+
+    <div class="linha">
+      <div class="campo">
+        <label for="estado">ESTADO*</label>
+        <input type="text" id="estado" name="estado" value="UF" />
+      </div>
+      <div class="campo">
+        <label for="cep">CEP*</label>
+        <input type="text" id="cep" name="cep" value="12345-678" />
+      </div>
+    </div>
+  </div>
+
+  <!-- ABA 3: ACESSO -->
+  <div class="tab-content">
+    <div class="linha">
+      <div class="campo campo-senha">
+  <label for="senha">SENHA*</label>
+  <div class="senha-wrapper">
+    <input type="password" id="senha" name="senha" value="**********" />
+    <button type="button" class="toggle-senha" aria-label="Mostrar senha" title="Mostrar senha">
+      <!-- Ícone olho preto SVG -->
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="black" viewBox="0 0 24 24">
+        <path d="M12 5c-7 0-11 7-11 7s4 7 11 7 11-7 11-7-4-7-11-7zm0 12a5 5 0 1 1 0-10 5 5 0 0 1 0 10z"/>
+        <circle cx="12" cy="12" r="2.5"/>
+      </svg>
+    </button>
+  </div>
+</div>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+  <button type="submit" class="botao">ALTERAR INFORMAÇÕES</button>
+</form>
+
+  </main>
+<!--RODAPÉ-->
+
+      
+</body>
+
+</html>

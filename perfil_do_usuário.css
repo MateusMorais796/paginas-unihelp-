@@ -1,0 +1,221 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #e6f2ff;
+  color: #003366;
+  font-size: 18px;
+  padding: 20px;
+}
+
+.container {
+  max-width: 850px;
+  margin: 40px auto;
+  background-color: white;
+  border-radius: 12px;
+  padding: 40px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.titulo-pagina {
+  text-align: center;
+  font-size: 2.2rem;
+  color: #003366;
+  margin-bottom: 20px;
+}
+
+.subtitulo {
+  display: block;
+  text-align: center;
+  font-size: 1.3rem;
+  color: #004c99;
+  margin-bottom: 30px;
+}
+
+.foto-perfil {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.foto-perfil img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #004c99;
+}
+
+.form .linha {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px; /* mais espaçamento */
+  margin-bottom: 30px; /* mais espaçamento entre linhas */
+}
+
+.campo {
+  flex: 1 1 45%; /* ocupa cerca de 45% para duas colunas */
+  display: flex;
+  flex-direction: column;
+  min-width: 200px;
+}
+
+.campo label {
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #003366;
+}
+
+.campo input {
+  padding: 14px;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 1px solid #99c2ff;
+  background-color: #f4f9ff;
+}
+
+.data input {
+  width: 60px;
+  margin-right: 12px;
+  padding: 10px;
+  font-size: 1rem;
+}
+
+#senha {
+  width: 100%;
+}
+
+.toggle-senha {
+  margin-top: 8px;
+  font-size: 1.3rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #003366;
+}
+
+.botao {
+  margin-top: 20px;
+  width: 100%;
+  padding: 14px;
+  font-size: 1.1rem;
+  background-color: #003366;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.campo select {
+  padding: 14px;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 1px solid #99c2ff;
+  background-color: #f4f9ff;
+  color: #003366;
+}
+
+/* Tabs padrão */
+.tabs {
+  display: flex;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #004c99;
+}
+
+.tab {
+  padding: 10px 20px;
+  cursor: pointer;
+  background-color: #f4f9ff;
+  border: 1px solid #99c2ff;
+  border-bottom: none;
+  border-radius: 8px 8px 0 0;
+  margin-right: 5px;
+  font-weight: bold;
+  color: #003366;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.tab:hover {
+  background-color: #e6f0ff;
+}
+
+.tab.active {
+  border-bottom: 2px solid white;
+  color: white; /* deixa o texto branco para destacar */
+}
+
+/* Cores diferentes para cada aba ativa */
+.tab:nth-child(1).active {
+  background-color: #0073e6; /* azul médio */
+  border-color: #005bb5;
+}
+
+.tab:nth-child(2).active {
+  background-color: #0073e6; /* verde */
+  border-color: #005bb5;
+}
+
+.tab:nth-child(3).active {
+  background-color: #0073e6; /* vermelho forte */
+  border-color: #005bb5;
+}
+
+/* Conteúdo das abas */
+.tab-content {
+  display: none;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/*boão ocultar/mostrar senha*/
+.senha-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.senha-wrapper input {
+  width: 100%;
+  padding-right: 40px; /* espaço para o botão olho */
+  font-size: 1rem;
+  padding: 14px;
+  border-radius: 6px;
+  border: 1px solid #99c2ff;
+  background-color: #f4f9ff;
+  color: #003366;
+}
+
+.toggle-senha {
+  position: absolute;
+  right: 10px;
+  top: 6px;
+  bottom: 0;
+  margin: auto 0;
+  height: 32px; /* altura aproximada do input */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+
+.toggle-senha svg {
+  display: block;
+  width: 20px;
+  height: 20px;
+}
+
